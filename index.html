@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/54144e2123.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="page">
+    <div class="create-playlist__modal" display='none'>
+        <button class="close__button">X</button>
+        <h3>Create playlist</h3>
+        <input name="playlist-title" type="text" placeholder="Enter playlist title" />
+        <form name="create-playlist">
+            <label>Select songs to add</label>
+            <br/>
+        </form>
+    </div>
+    <div class="playlists__menu">
+        <span>My Playlists</span>
+        <button class="new-playlist__button"><i class="fas fa-plus-square"></i>Create new</button></li>
+        <ul class="playlists__list">
+        </ul>
+    </div>
+    <div class="home__page">
+        <section class="popular-albums__section">
+            <h3>Top popular albums</h3>
+            <div class="popular-albums">
+            </div>
+        </section>
+        <section class="popular-songs__section">
+            <h3>Top popular songs</h3>
+            <div class="popular-songs">
+            </div>
+        </section>
+        <section class="you-may-like__section">
+            <h3>You may also like</h3>
+            <ul class="you-may-like-songs">
+            </ul>
+        </section>
+    </div>
+    <section class="player__section">
+        <span>Next up:</span>
+        <ul class="player__queue">
+        </ul>
+        <div class="player">
+            <img class="player__cover-art" data-amplitude-song-info='cover_art_url' />
+            <span class="player__title" data-amplitude-song-info='name'></span>
+            <span class="player__artist" data-amplitude-song-info="artist"></span>
+            <div class="progress__container">
+                <input type="range" class="amplitude-song-slider"/>
+            </div>
+            <div class="time__container">
+                <span class="duration-time"><span class="amplitude-duration-minutes"></span>:<span
+                        class="amplitude-duration-seconds"></span></span>
+                <span class="time-left">-<span class="amplitude-time-remaining"></span></span>
+            </div>
+            <div class="player-controls">
+                <div class="player-control__repeat amplitude-repeat amplitude-repeat-off"></div>
+                <div class="player-control__previous amplitude-prev"><img src="./images/bx_bx-skip-next-1.svg" /></div>
+                <div class="amplitude-play-pause player-control__play"></div>
+                <div class="player-control__next amplitude-next"><img src="./images/bx_bx-skip-next.svg" /></div>
+                <div class="player-control__shuffle amplitude-shuffle "></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.3.0/dist/amplitude.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
